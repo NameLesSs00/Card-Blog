@@ -2,26 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@100..900&display=swap');
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(47, 88%, 63%);
+  font-family: "Figtree", sans-serif;
+  font-weight: 500;
+  padding: 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 8%;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 1);
+  height: auto;
+  width: 90%;
+  max-width: 370px;
+  background-color: white;
+  padding: 20px;
+}
+
+.container * {
+  margin: 5px;
+}
+
+.BlogTitle {
+  color: hsl(0, 0%, 7%);
+  transition: color 0.3s ease;
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding-top: 1%;
+  padding-bottom: 4%;
+}
+
+.BlogTitle:hover {
+  color: hsl(47, 88%, 63%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .container {
+    height: auto;
+    padding: 20px;
   }
+
+  
+
 }
